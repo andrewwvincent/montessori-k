@@ -10,8 +10,8 @@ export class MapCore {
 
         // Austin, TX coordinates and zoom level
         this.initialView = {
-            center: [-97.7431, 30.2672],
-            zoom: 10
+            center: [-96.45968345601283, 39.99703365550713],
+            zoom: 4
         };
     }
 
