@@ -136,19 +136,6 @@ export const config = {
                 '#Medium': '#2196F3',
                 '#High': '#FFC107'
             }
-        },
-        {
-            id: 'Higher Ground (Open - Excluded)',
-            name: 'Higher Ground (Open - Excluded)',
-            file: 'data/higher-ground-excluded.kml',
-            defaultShape: 'square',  // This location uses hexagons
-            defaultChecked: false,
-            defaultLabels: false,
-            styles: {
-                '#Low': '#4CAF50',
-                '#Medium': '#2196F3',
-                '#High': '#FFC107'
-            }
         }
     ]
 };
