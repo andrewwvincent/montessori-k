@@ -4,9 +4,6 @@ import { config } from '../../config.js';
 let map; // Will be initialized from main script
 let popup; // Global popup for hover states
 let activeStatusFilters = new Set(['#Medium', '#High', '#Low']); // Track active status filters
-let enrollmentZonesLayer = null; // Track enrollment zones layer
-let zoneFeatures = []; // Store all zone features
-let activeZoneTypes = new Set(['active', 'discussions', 'potential', 'rejected']); // Track active zone types
 
 // Status to zone type mapping
 const statusToZoneType = {
@@ -46,44 +43,7 @@ export function initLocationLoader(mapInstance) {
     createLocationFilters();
     createStatusFilters();
     loadLocationLayers();
-    loadEnrollmentZones();
-    initZoneControls();
 }
-
-// Initialize zone controls
-function initZoneControls() {
-    // Add event listeners for zone toggles
-    const zoneTypes = ['medium', 'high', 'low'];
-    zoneTypes.forEach(type => {
-        document.getElementById(`zone-${type}`).addEventListener('change', (e) => {
-            updateZoneVisibility(type, e.target.checked);
-        });
-    });
-}
-
-// Update zone visibility based on type
-function updateZoneVisibility(zoneType, isVisible) {
-    if (!map.getLayer('enrollment-zones')) return;
-
-    if (isVisible) {
-        activeZoneTypes.add(zoneType);
-    } else {
-        activeZoneTypes.delete(zoneType);
-    }
-
-    // Update the source data to only include visible features
-    const visibleFeatures = zoneFeatures.filter(feature => {
-        const status = feature.properties.status;
-        const type = statusToZoneType[status];
-        return activeZoneTypes.has(type) && activeStatusFilters.has(status);
-    });
-
-    map.getSource('enrollment-zones').setData({
-        type: 'FeatureCollection',
-        features: visibleFeatures
-    });
-}
-
 
 // Create location filters in HTML
 function createLocationFilters() {
@@ -295,19 +255,6 @@ function toggleStatusFilter(statusId, isVisible) {
         }
     });
 
-    // Update enrollment zones filter
-    if (map.getLayer('enrollment-zones')) {
-        const features = zoneFeatures.filter(feature => {
-            const status = feature.properties.status;
-            const type = statusToZoneType[status];
-            return activeZoneTypes.has(type) && activeStatusFilters.has(status);
-        });
-
-        map.getSource('enrollment-zones').setData({
-            type: 'FeatureCollection',
-            features: features
-        });
-    }
 }
 
 // Toggle location layer

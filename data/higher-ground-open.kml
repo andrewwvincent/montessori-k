@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <Style id="Montessori_2.0">
+    <Style id="higher-ground-open">
       <IconStyle>
         <Icon>
           <href>http://maps.google.com/mapfiles/ms/icons/red-dot.png</href>
@@ -354,7 +354,7 @@
     </Placemark>
     <Placemark>
       <n>Legacy</n>
-      <styleUrl>#Medium</styleUrl>
+      <styleUrl>#High</styleUrl>
       <description><![CDATA[7220 Independence Pkwy, Plano, TX 75025]]></description>
       <Point>
         <coordinates>-96.74838,33.074797</coordinates>
@@ -542,6 +542,14 @@
       <description><![CDATA[5051 Ace Ln, Naperville, IL 60564 US]]></description>
       <Point>
         <coordinates>-88.206177,41.678326</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <n>South Riding</n>
+      <styleUrl>#Low</styleUrl>
+      <description><![CDATA[43181 Amberwood Plaza, Chantilly VA 20152 US]]></description>
+      <Point>
+        <coordinates>-77.50957228768308,38.923206444864896</coordinates>
       </Point>
     </Placemark>
     <Placemark>

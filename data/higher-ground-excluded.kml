@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Style id="higher-ground-excluded">
+      <IconStyle>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/ms/icons/red-dot.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <n>Emeryville</n>
+      <styleUrl>#Medium</styleUrl>
+      <description><![CDATA[1450 63rd St, Emeryville, CA 94608 US]]></description>
+      <Point>
+        <coordinates>-122.29018965885919,37.84462892493328</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <n>Lincoln Park</n>
+      <styleUrl>#Low</styleUrl>
+      <description><![CDATA[2301 N Clark St, Chicago, IL 60614 US]]></description>
+      <Point>
+        <coordinates>-87.63888571462927, 41.92435913985896</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <n>Peoria</n>
+      <styleUrl>#High</styleUrl>
+      <description><![CDATA[20565 Fletcher Way, Peoria, AZ 85382 US]]></description>
+      <Point>
+        <coordinates>-112.24113278773905, 33.67049865275315</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <n>Williamsburg</n>
+      <styleUrl>#Low</styleUrl>
+      <description><![CDATA[11179 Luschek Dr, Cincinnati, OH 45241]]></description>
+      <Point>
+        <coordinates>-73.96005371464442, 40.7133461461364</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
