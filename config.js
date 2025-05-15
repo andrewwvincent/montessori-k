@@ -125,8 +125,8 @@ export const config = {
 
     locationLayers: [
         {
-            id: 'Higher Ground (Open)',
-            name: 'Higher Ground (Open)',
+            id: 'Higher Ground',
+            name: 'Higher Ground',
             file: 'data/higher-ground-open.kml',
             defaultShape: 'hexagon',  // This location uses hexagons
             defaultChecked: false,
